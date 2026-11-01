@@ -15,7 +15,7 @@ const arr = (v) => !v ? [] : v.startsWith('[') ? v.slice(1, -1).split(',').map((
 const allowed = ['X', '小红书', '微信', 'arXiv'];
 const sources = arr(fm.sources); const bad = sources.filter((s) => !allowed.includes(s)); if (bad.length) console.warn('提示：非标准来源', bad);
 let body = m[2].replace(/^\s*#\s+.*\n/, '').trim() + '\n';
-if (/O30|RSS 2027|cursor\.com\/canvas/.test(body)) console.warn('⚠️ 正文含可能的内部内容（O30/RSS/canvas 链接），请检查后再发布');
+const blk=(process.env.DEXTREND_BLOCKLIST||'').split(',').filter(Boolean); if (blk.some(w=>body.includes(w))) console.warn('⚠️ 正文含屏蔽词，请检查后再发布');
 const q = (s) => JSON.stringify(s);
 const title = fm.title ? fm.title.replace(/^['"]|['"]$/g, '') : `灵巧手每日简报 · ${date}`;
 const out = `---\ntitle: ${q(title)}\ndate: ${date}\n${fm.summary ? `summary: ${q(fm.summary.replace(/^['"]|['"]$/g, ''))}\n` : ''}sources: ${q(sources)}\ntags: ${q(arr(fm.tags))}\n---\n\n${body}`;
