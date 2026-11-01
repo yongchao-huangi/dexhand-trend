@@ -1,0 +1,22 @@
+---
+import '../styles/global.css';
+import { u } from '../lib';
+const { title = '灵巧手趋势' } = Astro.props;
+---
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>{title === '灵巧手趋势' ? title : `${title} · 灵巧手趋势`}</title>
+<meta name="description" content="灵巧手与触觉领域每日趋势：X、小红书、微信公众号、arXiv 精选摘要。" />
+<meta name="color-scheme" content="dark" /><meta name="theme-color" content="#05070b" />
+</head>
+<body>
+<header class="top"><div class="wrap nav">
+  <a class="brand" href={u('/')}>DEX<b>//</b>TREND <small class="sub" style="color:var(--mu);font-weight:400">灵巧手趋势</small></a>
+  <nav><a href={u('/daily/')}>日报</a><a href={u('/weekly/')}>周报</a><a href={u('/tags/')}>标签</a><a href={u('/about/')}>关于</a></nav>
+</div></header>
+<main class="wrap"><slot /></main>
+<footer class="wrap foot">内容由 AI 辅助整理，评论仅为摘要，版权归原作者，详见原链接。· <a href={u('/about/')}>关于与纠错</a></footer>
+<div id="lb" role="dialog" aria-label="图片预览"><img alt="" /><p></p></div>
+<script is:inline>(()=>{const lb=document.getElementById('lb'),im=lb.querySelector('img'),cap=lb.querySelector('p');document.addEventListener('click',e=>{const a=e.target.closest('a[data-zoom]');if(a){e.preventDefault();im.src=a.href;const fc=a.parentElement.querySelector('figcaption');cap.textContent=fc?fc.textContent+' · 点击空白处关闭':'';lb.classList.add('on')}else if(e.target.closest('#lb'))lb.classList.remove('on')});addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')})})()</script>
+</body></html>

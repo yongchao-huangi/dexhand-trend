@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro'; import { all, u, slug } from '../../lib';
+const { d, w } = await all(); const src = ['X','小红书','微信','arXiv']; const c: Record<string, number> = {};
+for (const e of [...d, ...w]) for (const t of [...e.data.sources, ...e.data.tags]) c[t] = (c[t] || 0) + 1;
+const topics = Object.keys(c).filter((t) => !src.includes(t)).sort((a, b) => c[b] - c[a]);
+---
+<Base title="标签"><h1 class="page">标签</h1>
+<h3>来源</h3><div class="tags big">{src.filter((t) => c[t]).map((t) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>{t} <small>{c[t]}</small></a>)}</div>
+<h3>主题</h3><div class="tags big">{topics.map((t) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>{t} <small>{c[t]}</small></a>)}</div></Base>

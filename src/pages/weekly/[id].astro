@@ -1,0 +1,6 @@
+---
+import Post from '../../components/Post.astro';
+import { all } from '../../lib';
+export async function getStaticPaths() { const { w } = await all(); return w.map((e, i) => ({ params: { id: e.id }, props: { e, next: w[i - 1], prev: w[i + 1] } })); }
+---
+<Post kind="weekly" {...Astro.props} />

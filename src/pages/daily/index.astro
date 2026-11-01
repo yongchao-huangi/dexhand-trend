@@ -1,0 +1,5 @@
+---
+import Base from '../../layouts/Base.astro'; import Card from '../../components/Card.astro'; import { all } from '../../lib';
+const { d } = await all();
+---
+<Base title="每日简报"><h1 class="page">每日简报</h1><p class="muted">每天约 08:00（北京时间）更新。</p><div class="cards">{d.map((e) => <Card e={e} kind="daily" />)}</div></Base>

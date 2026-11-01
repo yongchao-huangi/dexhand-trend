@@ -1,0 +1,5 @@
+---
+import Base from '../../layouts/Base.astro'; import Card from '../../components/Card.astro'; import { all } from '../../lib';
+const { w } = await all();
+---
+<Base title="周报"><h1 class="page">周报</h1><div class="cards">{w.map((e) => <Card e={e} kind="weekly" />)}</div></Base>

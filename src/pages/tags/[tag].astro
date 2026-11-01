@@ -1,0 +1,8 @@
+---
+import Base from '../../layouts/Base.astro'; import Card from '../../components/Card.astro'; import { all } from '../../lib';
+export async function getStaticPaths() { const { d, w } = await all(); const s = new Set<string>(); for (const e of [...d, ...w]) for (const t of [...e.data.sources, ...e.data.tags]) s.add(t); return [...s].map((tag) => ({ params: { tag }, props: { tag, d: d.filter((e) => [...e.data.sources, ...e.data.tags].includes(tag)), w: w.filter((e) => [...e.data.sources, ...e.data.tags].includes(tag)) } })); }
+const { tag, d, w } = Astro.props;
+---
+<Base title={`标签：${tag}`}><h1 class="page">标签：{tag}</h1>
+{w.length > 0 && <><h3>周报</h3><div class="cards">{w.map((e) => <Card e={e} kind="weekly" />)}</div></>}
+{d.length > 0 && <><h3>日报</h3><div class="cards">{d.map((e) => <Card e={e} kind="daily" />)}</div></>}</Base>
