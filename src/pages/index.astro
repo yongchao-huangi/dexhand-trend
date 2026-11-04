@@ -8,8 +8,8 @@ const latest = d[0]; const { Content } = latest ? await render(latest) : { Conte
   <canvas id="fx" aria-hidden="true"></canvas><div class="scan"></div>
   <div class="kicker">&gt; dexterous_hand.trend --daily</div>
   <h1>灵巧手趋势<br/>Dexterous Hand Radar</h1>
-  <p>每天追踪 X、小红书、微信公众号与 arXiv 上的灵巧手动态，偏重触觉。只做精选摘要，附原文链接。</p>
-  <div class="stats"><div><b>{d.length}</b><span>DAILY</span></div><div><b>{w.length}</b><span>WEEKLY</span></div><div><b>4</b><span>SOURCES</span></div><div><b>{latest ? fmt(latest.data.date).slice(5) : '--'}</b><span>LATEST</span></div></div>
+  <p>每天追踪 X、小红书、微信公众号、arXiv 与 GitHub 上的灵巧手动态。只做精选摘要，附原文链接。</p>
+  <div class="stats"><div><b>{d.length}</b><span>DAILY</span></div><div><b>{w.length}</b><span>WEEKLY</span></div><div><b>5</b><span>SOURCES</span></div><div><b>{latest ? fmt(latest.data.date).slice(5) : '--'}</b><span>LATEST</span></div></div>
 </section>
 {w[0] && <a class="weekbanner" href={u(`/weekly/${w[0].id}/`)}><span class="meta" style="color:var(--p)">WEEKLY // {w[0].data.title.replace('灵巧手趋势周报 · ', '')}</span><b>本周周报 →</b><span>{w[0].data.summary}</span></a>}
 <div class="grid">
