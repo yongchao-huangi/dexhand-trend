@@ -17,6 +17,8 @@ const { title = '灵巧手趋势' } = Astro.props;
 </div></header>
 <main class="wrap"><slot /></main>
 <footer class="wrap foot">内容由 AI 辅助整理，评论仅为摘要，版权归原作者，详见原链接。· <a href={u('/about/')}>关于与纠错</a></footer>
+<a id="totop" href="#" aria-label="回到顶部">↑</a>
 <div id="lb" role="dialog" aria-label="图片预览"><img alt="" /><p></p></div>
 <script is:inline>(()=>{const lb=document.getElementById('lb'),im=lb.querySelector('img'),cap=lb.querySelector('p');document.addEventListener('click',e=>{const a=e.target.closest('a[data-zoom]');if(a){e.preventDefault();im.src=a.href;const fc=a.parentElement.querySelector('figcaption');cap.textContent=fc?fc.textContent+' · 点击空白处关闭':'';lb.classList.add('on')}else if(e.target.closest('#lb'))lb.classList.remove('on')});addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')})})()</script>
+<script is:inline>(()=>{const t=document.getElementById('totop');addEventListener('scroll',()=>t.classList.toggle('on',scrollY>1200),{passive:true});t.addEventListener('click',e=>{e.preventDefault();scrollTo({top:0,behavior:'smooth'})})})()</script>
 </body></html>
