@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro'; import { all, u, slug } from '../../lib';
-const { d, w } = await all(); const src = ['X','小红书','微信','arXiv']; const c: Record<string, number> = {};
+const { d, w } = await all(); const src = ['X','小红书','微信','arXiv','GitHub']; const c: Record<string, number> = {};
 for (const e of [...d, ...w]) for (const t of [...e.data.sources, ...e.data.tags]) c[t] = (c[t] || 0) + 1;
 const topics = Object.keys(c).filter((t) => !src.includes(t)).sort((a, b) => c[b] - c[a]);
 ---

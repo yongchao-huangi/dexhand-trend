@@ -1108,5 +1108,236 @@
   "platform": "小红书",
   "href": "https://www.xiaohongshu.com/explore/6ae5412b0000000012008393?xsec_token=ABFk-y4O1JthYJvpKpq8nwf1slHCN992w8Ix8CxRqSE1Y=&xsec_source=pc_search",
   "note": "视频"
+ },
+ "arxiv:2609.15726": {
+  "images": [
+   {
+    "src": "/media/arxiv-2609.15726.webp",
+    "w": 1000,
+    "h": 564
+   }
+  ],
+  "author": "Yang, Zhenjie 等",
+  "platform": "arXiv",
+  "href": "https://arxiv.org/abs/2609.15726",
+  "title": "Bench2Dex: Benchmarking Visuo-Tactile Bimanual Dexterous Manipulation Across Dexterous Hands",
+  "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "caption": "论文首图"
+ },
+ "arxiv:2610.33480": {
+  "images": [
+   {
+    "src": "/media/arxiv-2610.33480.webp",
+    "w": 1000,
+    "h": 716
+   }
+  ],
+  "author": "Zhou, Ao 等",
+  "platform": "arXiv",
+  "href": "https://arxiv.org/abs/2610.33480",
+  "title": "MDPO: Multi-constraint Dexterous Policy Optimization with Reinforcement Learning",
+  "license": "http://creativecommons.org/licenses/by/4.0/",
+  "caption": "论文首图"
+ },
+ "arxiv:2611.02171": {
+  "images": [
+   {
+    "src": "/media/arxiv-2611.02171.webp",
+    "w": 1000,
+    "h": 331
+   }
+  ],
+  "author": "Bhardwaj, Arjun 等",
+  "platform": "arXiv",
+  "href": "https://arxiv.org/abs/2611.02171",
+  "title": "GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation",
+  "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "caption": "论文首图"
+ },
+ "arxiv:2611.02629": {
+  "images": [
+   {
+    "src": "/media/arxiv-2611.02629.webp",
+    "w": 1000,
+    "h": 625
+   }
+  ],
+  "author": "Ping, Haonan 等",
+  "platform": "arXiv",
+  "href": "https://arxiv.org/abs/2611.02629",
+  "title": "DexArena: A Unified Benchmark for Long-Horizon Dexterous Manipulation",
+  "license": "http://creativecommons.org/licenses/by/4.0/",
+  "caption": "论文首图"
+ },
+ "arxiv:2611.03520": {
+  "images": [
+   {
+    "src": "/media/arxiv-2611.03520.webp",
+    "w": 1000,
+    "h": 465
+   }
+  ],
+  "author": "Binglin 等",
+  "platform": "arXiv",
+  "href": "https://arxiv.org/abs/2611.03520",
+  "title": "PanoTac: A Dense Three-Axis Tactile Sensor for Robust Touch-Centric Manipulation",
+  "license": "http://creativecommons.org/licenses/by/4.0/",
+  "caption": "论文首图"
+ },
+ "x:2116958545904369940": {
+  "images": [
+   {
+    "src": "/media/x-2116958545904369940-0.webp",
+    "w": 1000,
+    "h": 1000,
+    "video": true
+   }
+  ],
+  "author": "@spaceandtech_",
+  "platform": "X",
+  "href": "https://x.com/spaceandtech_/status/2116958545904369940"
+ },
+ "x:2117189803964039591": {
+  "images": [
+   {
+    "src": "/media/x-2117189803964039591-0.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   }
+  ],
+  "author": "@DechenGao",
+  "platform": "X",
+  "href": "https://x.com/DechenGao/status/2117189803964039591"
+ },
+ "x:2117276784672616906": {
+  "images": [
+   {
+    "src": "/media/x-2117276784672616906-0.webp",
+    "w": 1000,
+    "h": 566,
+    "video": false
+   }
+  ],
+  "author": "@Em_Nomadic",
+  "platform": "X",
+  "href": "https://x.com/Em_Nomadic/status/2117276784672616906"
+ },
+ "x:2117119513284227526": {
+  "images": [
+   {
+    "src": "/media/x-2117119513284227526-0.webp",
+    "w": 720,
+    "h": 720,
+    "video": true
+   }
+  ],
+  "author": "@ctorobotics",
+  "platform": "X",
+  "href": "https://x.com/ctorobotics/status/2117119513284227526"
+ },
+ "x:2117153750892896598": {
+  "images": [
+   {
+    "src": "/media/x-2117153750892896598-0.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   }
+  ],
+  "author": "@SharpaRobotics",
+  "platform": "X",
+  "href": "https://x.com/SharpaRobotics/status/2117153750892896598"
+ },
+ "x:2117272251431100687": {
+  "images": [
+   {
+    "src": "/media/x-2117272251431100687-0.webp",
+    "w": 772,
+    "h": 966,
+    "video": false
+   }
+  ],
+  "author": "@HumanoidRTech",
+  "platform": "X",
+  "href": "https://x.com/HumanoidRTech/status/2117272251431100687"
+ },
+ "x:2117111689548038255": {
+  "images": [
+   {
+    "src": "/media/x-2117111689548038255-0.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   }
+  ],
+  "author": "@TelixiaAI",
+  "platform": "X",
+  "href": "https://x.com/TelixiaAI/status/2117111689548038255"
+ },
+ "x:2117357127513641289": {
+  "images": [
+   {
+    "src": "/media/x-2117357127513641289-0.webp",
+    "w": 960,
+    "h": 1200,
+    "video": false
+   }
+  ],
+  "author": "@OWW",
+  "platform": "X",
+  "href": "https://x.com/OWW/status/2117357127513641289"
+ },
+ "x:2117693078450450639": {
+  "images": [
+   {
+    "src": "/media/x-2117693078450450639-0.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   }
+  ],
+  "author": "@BotaoUMD",
+  "platform": "X",
+  "href": "https://x.com/BotaoUMD/status/2117693078450450639"
+ },
+ "x:2117748428507607101": {
+  "images": [
+   {
+    "src": "/media/x-2117748428507607101-0.webp",
+    "w": 960,
+    "h": 1200,
+    "video": false
+   }
+  ],
+  "author": "@OWW",
+  "platform": "X",
+  "href": "https://x.com/OWW/status/2117748428507607101"
+ },
+ "x:2117754423942459804": {
+  "images": [
+   {
+    "src": "/media/x-2117754423942459804-0.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   }
+  ],
+  "author": "@rsalakhu",
+  "platform": "X",
+  "href": "https://x.com/rsalakhu/status/2117754423942459804"
+ },
+ "x:2117498384663880049": {
+  "images": [
+   {
+    "src": "/media/x-2117498384663880049-0.webp",
+    "w": 1000,
+    "h": 460,
+    "video": true
+   }
+  ],
+  "author": "@Deefui",
+  "platform": "X",
+  "href": "https://x.com/Deefui/status/2117498384663880049"
  }
 }

@@ -12,7 +12,7 @@ const fm = {}; for (const l of m[1].split('\n')) { const i = l.indexOf(':'); if 
 const date = (fm.date || '').replace(/['"]/g, '');
 if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) { console.error('date 必须是 YYYY-MM-DD'); process.exit(1); }
 const arr = (v) => !v ? [] : v.startsWith('[') ? v.slice(1, -1).split(',').map((s) => s.trim().replace(/^['"]|['"]$/g, '')).filter(Boolean) : v.split(/[,，]/).map((s) => s.trim()).filter(Boolean);
-const allowed = ['X', '小红书', '微信', 'arXiv'];
+const allowed = ['X', '小红书', '微信', 'arXiv', 'GitHub'];
 const sources = arr(fm.sources); const bad = sources.filter((s) => !allowed.includes(s)); if (bad.length) console.warn('提示：非标准来源', bad);
 let body = m[2].replace(/^\s*#\s+.*\n/, '').trim() + '\n';
 const blk=(process.env.DEXTREND_BLOCKLIST||'').split(',').filter(Boolean); if (blk.some(w=>body.includes(w))) console.warn('⚠️ 正文含屏蔽词，请检查后再发布');
