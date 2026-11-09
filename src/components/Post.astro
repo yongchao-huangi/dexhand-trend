@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { render } from 'astro:content';
-import { u, fmt, slug } from '../lib';
+import { u, fmt, slug, orderedTags } from '../lib';
 const { e, kind, prev, next } = Astro.props;
 const { Content } = await render(e);
 ---
@@ -9,7 +9,7 @@ const { Content } = await render(e);
 <article class="post neon">
   <div class="meta">{kind === 'daily' ? '每日简报' : '周报'} · {e.data.start ? `${fmt(e.data.start)} ～ ` : ''}{fmt(e.data.date)}</div>
   <h1>{e.data.title}</h1>
-  <div class="tags">{[...e.data.sources, ...e.data.tags].map((t: string) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>#{t}</a>)}</div>
+  <div class="tags">{orderedTags(e.data.sources, e.data.tags).map((t: string) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>#{t}</a>)}</div>
   <div class="prose"><Content /></div>
   <nav class="pn">{prev ? <a href={u(`/${kind}/${prev.id}/`)}>← {prev.data.title}</a> : <span />}{next ? <a href={u(`/${kind}/${next.id}/`)}>{next.data.title} →</a> : <span />}</nav>
 </article>
