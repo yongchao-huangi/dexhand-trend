@@ -1,5 +1,5 @@
 ---
-import Base from '../layouts/Base.astro'; import { render } from 'astro:content'; import { all, u, fmt, slug } from '../lib';
+import Base from '../layouts/Base.astro'; import { render } from 'astro:content'; import { all, u, fmt, slug, orderedTags } from '../lib';
 const { d, w } = await all();
 const latest = d[0]; const { Content } = latest ? await render(latest) : { Content: null };
 ---
@@ -8,7 +8,7 @@ const latest = d[0]; const { Content } = latest ? await render(latest) : { Conte
   <canvas id="fx" aria-hidden="true"></canvas><div class="scan"></div>
   <div class="kicker">&gt; dexterous_hand.trend --daily</div>
   <h1>灵巧手趋势<br/>Dexterous Hand Radar</h1>
-  <p>每天追踪 X、小红书、微信公众号、arXiv 与 GitHub 上的灵巧手动态。只做精选摘要，附原文链接。</p>
+  <p>每天追踪 X、小红书、GitHub、arXiv 与微信公众号上的灵巧手动态。只做精选摘要，附原文链接。</p>
   <div class="stats"><div><b>{d.length}</b><span>DAILY</span></div><div><b>{w.length}</b><span>WEEKLY</span></div><div><b>5</b><span>SOURCES</span></div><div><b>{latest ? fmt(latest.data.date).slice(5) : '--'}</b><span>LATEST</span></div></div>
 </section>
 {w[0] && <a class="weekbanner" href={u(`/weekly/${w[0].id}/`)}><span class="meta" style="color:var(--p)">WEEKLY // {w[0].data.title.replace('灵巧手趋势周报 · ', '')}</span><b>本周周报 →</b><span>{w[0].data.summary}</span></a>}
@@ -17,7 +17,7 @@ const latest = d[0]; const { Content } = latest ? await render(latest) : { Conte
 {latest && <>
   <div class="meta">LATEST // {fmt(latest.data.date)}</div>
   <h2 style="margin:4px 0"><a href={u(`/daily/${latest.id}/`)}>{latest.data.title}</a></h2>
-  <div class="tags">{[...latest.data.sources, ...latest.data.tags].map((t) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>#{t}</a>)}</div>
+  <div class="tags">{orderedTags(latest.data.sources, latest.data.tags).map((t) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>#{t}</a>)}</div>
   <div class="prose"><Content /></div>
 </>}
 </section>

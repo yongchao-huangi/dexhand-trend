@@ -1,10 +1,10 @@
 ---
-import { u, fmt, slug } from '../lib';
+import { u, fmt, slug, orderedTags } from '../lib';
 const { e, kind } = Astro.props;
 ---
 <article class="card">
   <div class="meta">{kind === 'daily' ? '日报' : '周报'} · {e.data.start ? `${fmt(e.data.start)} ～ ` : ''}{fmt(e.data.date)}</div>
   <h3><a href={u(`/${kind}/${e.id}/`)}>{e.data.title}</a></h3>
   {e.data.summary && <p>{e.data.summary}</p>}
-  <div class="tags">{[...e.data.sources, ...e.data.tags].map((t: string) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>#{t}</a>)}</div>
+  <div class="tags">{orderedTags(e.data.sources, e.data.tags).map((t: string) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>#{t}</a>)}</div>
 </article>
