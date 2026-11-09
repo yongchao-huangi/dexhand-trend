@@ -1000,5 +1000,437 @@
   "author": "@rsalakhu",
   "platform": "X",
   "href": "https://x.com/rsalakhu/status/2117754423942459804"
+ },
+ "arxiv:2610.12440": {
+  "images": [
+   {
+    "src": "/media/arxiv-2610.12440.webp",
+    "w": 802,
+    "h": 321
+   }
+  ],
+  "author": "Gao, Dechen 等",
+  "platform": "arXiv",
+  "href": "https://arxiv.org/abs/2610.12440",
+  "title": "Generative Neural Retargeting for Human-to-Robot Dexterous Manipulation",
+  "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "caption": "论文首图"
+ },
+ "arxiv:2611.03163": {
+  "images": [
+   {
+    "src": "/media/arxiv-2611.03163.webp",
+    "w": 1000,
+    "h": 411
+   }
+  ],
+  "author": "Zhang, Shuaike 等",
+  "platform": "arXiv",
+  "href": "https://arxiv.org/abs/2611.03163",
+  "title": "FineCraft: Enhancing VLA Models for Fine-Grained Manipulation",
+  "license": "http://creativecommons.org/licenses/by/4.0/",
+  "caption": "论文首图"
+ },
+ "arxiv:2611.05377": {
+  "images": [
+   {
+    "src": "/media/arxiv-2611.05377.webp",
+    "w": 1000,
+    "h": 616
+   }
+  ],
+  "author": "Kim, Jisoo 等",
+  "platform": "arXiv",
+  "href": "https://arxiv.org/abs/2611.05377",
+  "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
+  "license": "http://creativecommons.org/licenses/by/4.0/",
+  "caption": "论文首图"
+ },
+ "arxiv:2611.05979": {
+  "images": [
+   {
+    "src": "/media/arxiv-2611.05979.webp",
+    "w": 1000,
+    "h": 405
+   }
+  ],
+  "author": "Hong, Zhengdong 等",
+  "platform": "arXiv",
+  "href": "https://arxiv.org/abs/2611.05979",
+  "title": "Learning Object-Centric Motion Priors from Human for Robotic Dexterous Manipulation",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "caption": "论文首图"
+ },
+ "arxiv:2611.07712": {
+  "images": [
+   {
+    "src": "/media/arxiv-2611.07712.webp",
+    "w": 1000,
+    "h": 211
+   }
+  ],
+  "author": "Kuzmin, Nikita 等",
+  "platform": "arXiv",
+  "href": "https://arxiv.org/abs/2611.07712",
+  "title": "AffectiveVLA: Safe and Intent-Aware VLA Control for Human-Humanoid Social Interaction",
+  "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+  "caption": "论文首图"
+ },
+ "arxiv:2611.07881": {
+  "images": [
+   {
+    "src": "/media/arxiv-2611.07881.webp",
+    "w": 1000,
+    "h": 657
+   }
+  ],
+  "author": "Lin, Yijiong 等",
+  "platform": "arXiv",
+  "href": "https://arxiv.org/abs/2611.07881",
+  "title": "TactileLab: Sim-to-Real Dexterous Robot Manipulation with Efficient Shear-Sensitive Tactile Simulation",
+  "license": "http://creativecommons.org/licenses/by/4.0/",
+  "caption": "论文首图"
+ },
+ "x:2117880315763138977": {
+  "images": [
+   {
+    "src": "/media/x-2117880315763138977-0.webp",
+    "w": 1000,
+    "h": 1000,
+    "video": false
+   }
+  ],
+  "author": "@Boji_king8ji",
+  "platform": "X",
+  "href": "https://x.com/Boji_king8ji/status/2117880315763138977"
+ },
+ "x:2117925901665280246": {
+  "images": [
+   {
+    "src": "/media/x-2117925901665280246-0.webp",
+    "w": 1000,
+    "h": 389,
+    "video": false
+   }
+  ],
+  "author": "@DaimonRobotics",
+  "platform": "X",
+  "href": "https://x.com/DaimonRobotics/status/2117925901665280246"
+ },
+ "x:2117957781882126385": {
+  "images": [
+   {
+    "src": "/media/x-2117957781882126385-0.webp",
+    "w": 719,
+    "h": 450,
+    "video": false
+   }
+  ],
+  "author": "@comaple123",
+  "platform": "X",
+  "href": "https://x.com/comaple123/status/2117957781882126385"
+ },
+ "x:2117996847990206857": {
+  "images": [
+   {
+    "src": "/media/x-2117996847990206857-0.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   }
+  ],
+  "author": "@Ying_yyyyyyyy",
+  "platform": "X",
+  "href": "https://x.com/Ying_yyyyyyyy/status/2117996847990206857"
+ },
+ "x:2118151126445129928": {
+  "images": [
+   {
+    "src": "/media/x-2118151126445129928-0.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   }
+  ],
+  "author": "@deepakpathak",
+  "platform": "X",
+  "href": "https://x.com/deepakpathak/status/2118151126445129928"
+ },
+ "x:2118188805798940993": {
+  "images": [
+   {
+    "src": "/media/x-2118188805798940993-0.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   }
+  ],
+  "author": "@Jianfei_AI",
+  "platform": "X",
+  "href": "https://x.com/Jianfei_AI/status/2118188805798940993"
+ },
+ "x:2118348610299408569": {
+  "images": [
+   {
+    "src": "/media/x-2118348610299408569-0.webp",
+    "w": 864,
+    "h": 632,
+    "video": false
+   }
+  ],
+  "author": "@jiqizhixin",
+  "platform": "X",
+  "href": "https://x.com/jiqizhixin/status/2118348610299408569"
+ },
+ "x:2118426648899146054": {
+  "images": [
+   {
+    "src": "/media/x-2118426648899146054-0.webp",
+    "w": 960,
+    "h": 1200,
+    "video": false
+   }
+  ],
+  "author": "@ColinYu14116982",
+  "platform": "X",
+  "href": "https://x.com/ColinYu14116982/status/2118426648899146054"
+ },
+ "x:2118450525633237099": {
+  "images": [
+   {
+    "src": "/media/x-2118450525633237099-0.webp",
+    "w": 675,
+    "h": 1200,
+    "video": true
+   }
+  ],
+  "author": "@RoboticsCtr",
+  "platform": "X",
+  "href": "https://x.com/RoboticsCtr/status/2118450525633237099"
+ },
+ "x:2118497379519226205": {
+  "images": [
+   {
+    "src": "/media/x-2118497379519226205-0.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   },
+   {
+    "src": "/media/x-2118497379519226205-1.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   }
+  ],
+  "author": "@yuxuank02",
+  "platform": "X",
+  "href": "https://x.com/yuxuank02/status/2118497379519226205"
+ },
+ "x:2118677275671708141": {
+  "images": [
+   {
+    "src": "/media/x-2118677275671708141-0.webp",
+    "w": 900,
+    "h": 1200,
+    "video": false
+   }
+  ],
+  "author": "@Allin1828",
+  "platform": "X",
+  "href": "https://x.com/Allin1828/status/2118677275671708141"
+ },
+ "x:2118740442275541121": {
+  "images": [
+   {
+    "src": "/media/x-2118740442275541121-0.webp",
+    "w": 770,
+    "h": 1028,
+    "video": false
+   },
+   {
+    "src": "/media/x-2118740442275541121-1.webp",
+    "w": 898,
+    "h": 1200,
+    "video": false
+   }
+  ],
+  "author": "@VicHODL",
+  "platform": "X",
+  "href": "https://x.com/VicHODL/status/2118740442275541121"
+ },
+ "x:2118744767727288773": {
+  "images": [
+   {
+    "src": "/media/x-2118744767727288773-0.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   }
+  ],
+  "author": "@jianglong_ye",
+  "platform": "X",
+  "href": "https://x.com/jianglong_ye/status/2118744767727288773"
+ },
+ "x:2119053249160355932": {
+  "images": [
+   {
+    "src": "/media/x-2119053249160355932-0.webp",
+    "w": 1000,
+    "h": 562,
+    "video": true
+   }
+  ],
+  "author": "@LeoKharon",
+  "platform": "X",
+  "href": "https://x.com/LeoKharon/status/2119053249160355932"
+ },
+ "x:2119085641652654378": {
+  "images": [
+   {
+    "src": "/media/x-2119085641652654378-0.webp",
+    "w": 680,
+    "h": 1200,
+    "video": true
+   }
+  ],
+  "author": "@techniahqrobot",
+  "platform": "X",
+  "href": "https://x.com/techniahqrobot/status/2119085641652654378"
+ },
+ "x:2119342370835869953": {
+  "images": [
+   {
+    "src": "/media/x-2119342370835869953-0.webp",
+    "w": 1000,
+    "h": 563,
+    "video": false
+   }
+  ],
+  "author": "@skylarx999",
+  "platform": "X",
+  "href": "https://x.com/skylarx999/status/2119342370835869953"
+ },
+ "x:2119490246257565897": {
+  "images": [
+   {
+    "src": "/media/x-2119490246257565897-0.webp",
+    "w": 804,
+    "h": 1005,
+    "video": false
+   }
+  ],
+  "author": "@Humanoidguide",
+  "platform": "X",
+  "href": "https://x.com/Humanoidguide/status/2119490246257565897"
+ },
+ "x:2119570159786758411": {
+  "images": [
+   {
+    "src": "/media/x-2119570159786758411-0.webp",
+    "w": 1000,
+    "h": 236,
+    "video": true
+   }
+  ],
+  "author": "@Hanry65960814",
+  "platform": "X",
+  "href": "https://x.com/Hanry65960814/status/2119570159786758411"
+ },
+ "xhs:6aee04b0000000000902cb87": {
+  "images": [
+   {
+    "src": "/media/xhs-6aee04b0000000000902cb87.webp",
+    "w": 1000,
+    "h": 563
+   }
+  ],
+  "author": "HCLab",
+  "platform": "小红书",
+  "href": "https://www.xiaohongshu.com/explore/6aee04b0000000000902cb87?xsec_token=ABUGKb4cGPUBotinaxZk_GszALujDS7avcq1GfThztHXY=&xsec_source=pc_feed"
+ },
+ "xhs:6aec6b420000000018039273": {
+  "images": [
+   {
+    "src": "/media/xhs-6aec6b420000000018039273.webp",
+    "w": 1000,
+    "h": 749
+   }
+  ],
+  "author": "灵心巧手Evolabs算法团队",
+  "platform": "小红书",
+  "href": "https://www.xiaohongshu.com/explore/6aec6b420000000018039273?xsec_token=ABXlDKza7w9ix_GE29N9bKaMP3t0ok6-PWvOfu9EeJGKI=&xsec_source=pc_feed"
+ },
+ "xhs:6ae9f409000000000502cd13": {
+  "images": [
+   {
+    "src": "/media/xhs-6ae9f409000000000502cd13.webp",
+    "w": 1000,
+    "h": 436
+   }
+  ],
+  "author": "洗发水爱洗头",
+  "platform": "小红书",
+  "href": "https://www.xiaohongshu.com/explore/6ae9f409000000000502cd13?xsec_token=ABtc5MmBGD3OMcuObJQPLA8_OOlVShtXFmQtPhQHOnCn0=&xsec_source=pc_feed"
+ },
+ "xhs:6ae9761b000000000602d09f": {
+  "images": [
+   {
+    "src": "/media/xhs-6ae9761b000000000602d09f.webp",
+    "w": 1000,
+    "h": 1267
+   }
+  ],
+  "author": "AI先声",
+  "platform": "小红书",
+  "href": "https://www.xiaohongshu.com/explore/6ae9761b000000000602d09f?xsec_token=ABtc5MmBGD3OMcuObJQPLA841YsEWToZtFLkoI5l_-KUk=&xsec_source=pc_feed"
+ },
+ "xhs:6ae7e41c0000000015004432": {
+  "images": [
+   {
+    "src": "/media/xhs-6ae7e41c0000000015004432.webp",
+    "w": 1000,
+    "h": 1031
+   }
+  ],
+  "author": "Mingrui",
+  "platform": "小红书",
+  "href": "https://www.xiaohongshu.com/explore/6ae7e41c0000000015004432?xsec_token=ABjWGMHGfEfKYWqdXGJdc2HDgEXAb4BVWCJvK1phqzEsU=&xsec_source=pc_feed"
+ },
+ "xhs:6ae8a8a0000000003601bdc3": {
+  "images": [
+   {
+    "src": "/media/xhs-6ae8a8a0000000003601bdc3.webp",
+    "w": 1000,
+    "h": 1336
+   }
+  ],
+  "author": "阿司匹林",
+  "platform": "小红书",
+  "href": "https://www.xiaohongshu.com/explore/6ae8a8a0000000003601bdc3?xsec_token=ABUKRyWJekcneSbFZKUB1rWtINLECOCl5eY8gquLp1SwI=&xsec_source=pc_feed"
+ },
+ "xhs:6aed166a0000000023012dfc": {
+  "images": [
+   {
+    "src": "/media/xhs-6aed166a0000000023012dfc.webp",
+    "w": 1000,
+    "h": 1333
+   }
+  ],
+  "author": "RoboLearn",
+  "platform": "小红书",
+  "href": "https://www.xiaohongshu.com/explore/6aed166a0000000023012dfc?xsec_token=AByJ0Gfv6jTQT9wyxkYf-GkXvahBjRpP1czKebOV2Pp4M=&xsec_source=pc_feed"
+ },
+ "xhs:6aebdd61000000001503c7ba": {
+  "images": [
+   {
+    "src": "/media/xhs-6aebdd61000000001503c7ba.webp",
+    "w": 1000,
+    "h": 1335
+   }
+  ],
+  "author": "将门技术社区",
+  "platform": "小红书",
+  "href": "https://www.xiaohongshu.com/explore/6aebdd61000000001503c7ba?xsec_token=ABnJcCsxA_UjlnpM3aETXdBCVVJ3XfACrrfuFJHsk_lBw=&xsec_source=pc_feed"
  }
 }
