@@ -1,0 +1,20 @@
+---
+const { items = [] } = Astro.props;
+const glance = items.slice().sort((a, b) => b.importance - a.importance || a.order - b.order);
+---
+{glance.length > 0 && (
+<nav class="glance" aria-label="速览">
+  <h2>速览 <span>按重要度</span></h2>
+  <ol>
+    {glance.map((it) => (
+      <li>
+        <a href={`#${it.id}`} class={it.section ? 'has-sec' : ''}>
+          <span class="imp" data-tier={it.importance} aria-label={`重要度 ${it.importance}`}>{it.importance}</span>
+          <span class="glance-title">{it.title}</span>
+          {it.section && <span class="glance-sec">{it.section}</span>}
+        </a>
+      </li>
+    ))}
+  </ol>
+</nav>
+)}

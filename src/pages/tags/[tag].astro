@@ -1,8 +1,28 @@
 ---
-import Base from '../../layouts/Base.astro'; import Card from '../../components/Card.astro'; import { all } from '../../lib';
-export async function getStaticPaths() { const { d, w } = await all(); const s = new Set<string>(); for (const e of [...d, ...w]) for (const t of [...e.data.sources, ...e.data.tags]) s.add(t); return [...s].map((tag) => ({ params: { tag }, props: { tag, d: d.filter((e) => [...e.data.sources, ...e.data.tags].includes(tag)), w: w.filter((e) => [...e.data.sources, ...e.data.tags].includes(tag)) } })); }
-const { tag, d, w } = Astro.props;
+import Base from '../../layouts/Base.astro'; import Card from '../../components/Card.astro'; import { all, markedItems, u, fmt } from '../../lib';
+export async function getStaticPaths() {
+  const { d, w } = await all();
+  const items = await markedItems();
+  const s = new Set<string>();
+  for (const e of [...d, ...w]) for (const t of [...e.data.sources, ...e.data.tags]) s.add(t);
+  for (const it of items) for (const t of it.tags) s.add(t);
+  return [...s].map((tag) => ({
+    params: { tag: tag.replaceAll('/', '\uFF0F') },
+    props: {
+      tag,
+      d: d.filter((e) => [...e.data.sources, ...e.data.tags].includes(tag)),
+      w: w.filter((e) => [...e.data.sources, ...e.data.tags].includes(tag)),
+      items: items.filter((it) => it.tags.includes(tag)).sort((a, b) => b.importance - a.importance || +new Date(b.date) - +new Date(a.date) || a.order - b.order),
+    },
+  }));
+}
+const { tag, d, w, items } = Astro.props;
 ---
 <Base title={`标签：${tag}`}><h1 class="page">标签：{tag}</h1>
 {w.length > 0 && <><h3>周报</h3><div class="cards">{w.map((e) => <Card e={e} kind="weekly" />)}</div></>}
-{d.length > 0 && <><h3>日报</h3><div class="cards">{d.map((e) => <Card e={e} kind="daily" />)}</div></>}</Base>
+{d.length > 0 && <><h3>日报</h3><div class="cards">{d.map((e) => <Card e={e} kind="daily" />)}</div></>}
+{items.length > 0 && <><h3>条目</h3><ul class="hits">{items.map((it) => <li>
+  <span class="imp" data-tier={it.importance} aria-label={`重要度 ${it.importance}`}>{it.importance}</span>
+  <a href={u(`/daily/${it.postId}/#${it.id}`)}>{it.title}</a>
+  <span class="meta">{fmt(it.date)}{it.section ? ` · ${it.section}` : ''}</span>
+</li>)}</ul></>}</Base>

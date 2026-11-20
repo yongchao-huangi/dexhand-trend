@@ -1,9 +1,13 @@
 ---
-import Base from '../../layouts/Base.astro'; import { all, u, slug, SOURCE_ORDER } from '../../lib';
+import Base from '../../layouts/Base.astro'; import { all, u, slug, SOURCE_ORDER, markedItems, ITEM_TAGS } from '../../lib';
 const { d, w } = await all(); const src = [...SOURCE_ORDER]; const c: Record<string, number> = {};
 for (const e of [...d, ...w]) for (const t of [...e.data.sources, ...e.data.tags]) c[t] = (c[t] || 0) + 1;
 const topics = Object.keys(c).filter((t) => !src.includes(t)).sort((a, b) => c[b] - c[a]);
+const ic: Record<string, number> = {};
+for (const it of await markedItems()) for (const t of it.tags) ic[t] = (ic[t] || 0) + 1;
+const itemTags = [...ITEM_TAGS.filter((t) => ic[t]), ...Object.keys(ic).filter((t) => !ITEM_TAGS.includes(t)).sort((a, b) => (ic[b] - ic[a]) || a.localeCompare(b, 'zh'))];
 ---
 <Base title="标签"><h1 class="page">标签</h1>
 <h3>来源</h3><div class="tags big">{src.filter((t) => c[t]).map((t) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>{t} <small>{c[t]}</small></a>)}</div>
-<h3>主题</h3><div class="tags big">{topics.map((t) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>{t} <small>{c[t]}</small></a>)}</div></Base>
+<h3>主题</h3><div class="tags big">{topics.map((t) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>{t} <small>{c[t]}</small></a>)}</div>
+{itemTags.length > 0 && <><h3>条目</h3><p class="muted">按条目标签汇总各期简报。数字是条目数。</p><div class="tags big">{itemTags.map((t) => <a class="tag" href={u(`/tags/${slug(t)}/`)}>{t} <small>{ic[t]}</small></a>)}</div></>}</Base>

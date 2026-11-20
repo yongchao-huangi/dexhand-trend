@@ -1,8 +1,9 @@
 // Display order for source sections and source tags.
-// Lead copy (今日要点 / 本周要点, etc.) stays put; these five sources follow it.
-export const SOURCE_ORDER = ['X', '小红书', 'GitHub', 'arXiv', '微信'];
+// Lead copy (今日要点 / 本周要点, etc.) stays put; source sections follow it.
+// Hacker News 与 Reddit, then 英文媒体与博客, sit after arXiv and before 中文媒体 / 微信.
+export const SOURCE_ORDER = ['X', '小红书', 'GitHub', 'arXiv', 'Hacker News 与 Reddit', '英文媒体与博客', '微信'];
 
-const RANK = { x: 0, xhs: 1, gh: 2, arxiv: 3, wx: 4 };
+const RANK = { x: 0, xhs: 1, gh: 2, arxiv: 3, hn: 4, en: 5, wx: 6 };
 
 export function sortSources(list) {
   const rank = (s) => {
@@ -45,6 +46,8 @@ function kindOf(chunk) {
   if (t.startsWith('小红书')) return 'xhs';
   if (/^GitHub\b/i.test(t)) return 'gh';
   if (/^arXiv\b/i.test(t)) return 'arxiv';
+  if (/^Hacker News\b/i.test(t) || /^HN\b/.test(t)) return 'hn';
+  if (/^英文媒体/.test(t) || /^英文博客/.test(t)) return 'en';
   if (/微信|中文媒体|公众号/.test(t)) return 'wx';
   return 'other';
 }
