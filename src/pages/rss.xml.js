@@ -1,21 +1,19 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
+import { buildFeedOptions, itemPath } from '../feed.mjs';
 
 export async function GET(context) {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+  const base = import.meta.env.BASE_URL;
   const daily = (await getCollection('daily')).sort((a, b) => +b.data.date - +a.data.date);
-  return rss({
-    title: '灵巧手趋势',
-    description: '灵巧手领域每日趋势：精选摘要，附原文链接。',
+  return rss(buildFeedOptions({
     site: context.site,
-    trailingSlash: true,
-    customData: '<language>zh-CN</language>',
+    base,
     items: daily.map((e) => ({
       title: e.data.title,
       pubDate: e.data.date,
       description: e.data.summary || e.data.title,
-      link: `${base}/daily/${e.id}/`,
+      link: itemPath(base, e.id),
       categories: [...e.data.sources, ...e.data.tags],
     })),
-  });
+  }));
 }
