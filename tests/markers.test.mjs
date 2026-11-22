@@ -55,13 +55,29 @@ describe('markers', () => {
     assert.equal(items[0].importance, 2);
   });
 
-  it('leaves published posts unmarked', () => {
+  it('leaves unmarked published posts free of markers', () => {
     for (const kind of ['daily', 'weekly']) {
       const dir = path.join(root, 'src/content', kind);
       for (const name of fs.readdirSync(dir).filter((f) => f.endsWith('.md'))) {
-        const items = extractMarkedItems(fs.readFileSync(path.join(dir, name), 'utf8'));
+        const raw = fs.readFileSync(path.join(dir, name), 'utf8');
+        if (raw.includes('〔重要度')) continue;
+        const items = extractMarkedItems(raw);
         assert.equal(items.length, 0, `${kind}/${name}`);
       }
+    }
+  });
+
+  it('keeps importance markers on the 11-21 and 11-22 briefs', () => {
+    for (const name of ['2026-11-21.md', '2026-11-22.md']) {
+      const raw = fs.readFileSync(path.join(root, 'src/content/daily', name), 'utf8');
+      const items = extractMarkedItems(raw);
+      assert.ok(items.length > 0, name);
+      assert.ok(items.every((it) => it.importance >= 1 && it.importance <= 5), name);
+    }
+    for (const name of ['2026-11-17.md', '2026-11-18.md', '2026-11-19.md']) {
+      const raw = fs.readFileSync(path.join(root, 'src/content/daily', name), 'utf8');
+      assert.equal(raw.includes('〔重要度'), false, name);
+      assert.equal(extractMarkedItems(raw).length, 0, name);
     }
   });
 
@@ -115,6 +131,7 @@ describe('rehype markers', () => {
       const dir = path.join(root, 'src/content', kind);
       for (const name of fs.readdirSync(dir).filter((f) => f.endsWith('.md'))) {
         const raw = fs.readFileSync(path.join(dir, name), 'utf8').replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
+        if (raw.includes('〔重要度')) continue;
         const plain = await toHtml(raw, false);
         const marked = await toHtml(raw, true);
         assert.equal(marked, plain, `${kind}/${name}`);
